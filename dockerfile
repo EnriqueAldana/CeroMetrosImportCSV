@@ -15,7 +15,5 @@ RUN npm install
 COPY . .
 
 EXPOSE 8080
-# Start app
-ENTRYPOINT ["/docker/entrypoint.sh"]
 
 CMD [ "node", "CeroMetrosFileServer.js" ]
