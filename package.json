@@ -1,0 +1,22 @@
+{
+  "name": "CeroMetrosImportCSV",
+  "version": "1.0.0",
+  "description": "",
+  "main": "CeroMetrosFileServer.js",
+  "scripts": {
+    "run": "node CeroMetrosFileServer.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "consolidate": "^0.16.0",
+    "express": "^4.17.3"
+  },"meteor": {
+    "mainModule": {
+      "server": "server/main.js"
+    },
+    "testModule": "tests/main.js"
+  }
+}

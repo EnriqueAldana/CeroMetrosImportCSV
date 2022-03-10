@@ -1,0 +1,15 @@
+Construir
+docker build . -t 0mts/0metrosfileserver
+Correr
+docker run -p 8080:8080 -d 0mts/0metrosfileserver
+
+# Get container ID
+$ docker ps
+
+# Print app output
+$ docker logs <container id>
+
+# Example
+Running on http://localhost:8080
+
+

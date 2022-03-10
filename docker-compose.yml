@@ -1,0 +1,22 @@
+version: '3'
+services:
+  app:
+    container_name: app_file_server
+    build:
+      context: .
+      dockerfile: dockerfile
+    image: app_file_server_image
+    restart: on-failure
+    env_file: docker.env
+    ports:
+      - 8080:8080
+    volumes:
+      - $PWD/../CeroMetros/uploadFiles:/data/uploadFiles
+     
+    networks:
+      - cerometros-net
+
+  
+networks:
+      cerometros-net:
+        driver: bridge
