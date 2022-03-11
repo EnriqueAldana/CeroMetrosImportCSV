@@ -1,8 +1,7 @@
 FROM node:16
 
 # Create app directory
-WORKDIR /usr/src/app/
-
+WORKDIR /usr/src/app/uploadFiles
 # Install app dependencies
 # A wildcard is used to ensure both package.json AND package-lock.json are copied
 # where available (npm@5+)
@@ -15,5 +14,6 @@ RUN npm install
 COPY . .
 
 EXPOSE 8080
-
-CMD [ "node", "CeroMetrosFileServer.js" ]
+# Start app
+ENTRYPOINT ["/bin/sh -c"]
+CMD [ "node", "/usr/src/app/CeroMetrosFileServer.js" ]
