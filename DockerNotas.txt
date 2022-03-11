@@ -14,3 +14,8 @@ Running on http://localhost:8080
 
 
 git clone https://github.com/EnriqueAldana/CeroMetrosImportCSV.git   
+
+
+Error de concatenacion de rutas 
+Archivo descargado: chweQCLsR5qsT3edn.jpg
+Error: ENOENT: no such file or directory, stat '/'/usr/app/uploadedFiles'/chweQCLsR5qsT3edn.jpg'
