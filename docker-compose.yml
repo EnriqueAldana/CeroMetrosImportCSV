@@ -11,7 +11,7 @@ services:
     ports:
       - 8080:8080
     volumes:
-      - $PWD/../CeroMetros/uploadFiles:/usr/src/app/uploadFiles
+      - $PWD/../CeroMetros/uploadFiles:/usr/src/app/
      
     networks:
       - cerometros-net
