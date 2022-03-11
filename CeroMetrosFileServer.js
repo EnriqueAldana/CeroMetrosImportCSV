@@ -22,7 +22,7 @@ app.get('/descargar/:idFile/:idFileName',function(req,res){
     //res.end('Downloaded', 'UTF-8')
     //res.type="text/csv"
     // config.files_path+'/'+
-    res.download("/"+file.idFile,file.idFileName);
+    res.download(config.files_path+"/"+file.idFile,file.idFileName);
 });
 
 server.listen(config.port,() =>{
