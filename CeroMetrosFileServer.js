@@ -21,7 +21,8 @@ app.get('/descargar/:idFile/:idFileName',function(req,res){
     //res.attachment(__dirname+'/uploadedFiles/'+file.idFile);
     //res.end('Downloaded', 'UTF-8')
     //res.type="text/csv"
-    res.download(config.files_path+'/'+file.idFile,file.idFileName);
+    // config.files_path+'/'+
+    res.download("/"+file.idFile,file.idFileName);
 });
 
 server.listen(config.port,() =>{
