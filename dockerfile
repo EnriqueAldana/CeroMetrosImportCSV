@@ -15,5 +15,5 @@ COPY . .
 
 EXPOSE 8080
 # Start app
-ENTRYPOINT ["/bin/sh -c"]
+ENTRYPOINT ["sh"]
 CMD [ "node", "/usr/src/app/CeroMetrosFileServer.js" ]
