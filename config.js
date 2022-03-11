@@ -4,6 +4,6 @@ var config = {
 };
 
 
-config.files_path= process.env.FILES_LOCAL_PATH || '/opt/uploadFiles';
+config.files_path= process.env.FILES_LOCAL_PATH || './../CeroMetros/uploadFiles';
 config.port= process.env.PORT || 8080;
 module.exports = config;
