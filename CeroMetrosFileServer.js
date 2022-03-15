@@ -16,13 +16,14 @@ app.get('/descargar/:idFile/:idFileName',function(req,res){
         idFile,
         idFileName
       } = req.params
-    
-    console.log("Archivo descargado:",file.idFileName )
+    const pathFileWithExt=config.files_path.concat(path.delimiter,file.idFile)
+    console.info("Ruta y archivo por descargar: ",pathFileWithExt)
+    console.log("Nombre para el archivo x descargar:",file.idFileName )
     //res.attachment(__dirname+'/uploadedFiles/'+file.idFile);
     //res.end('Downloaded', 'UTF-8')
     //res.type="text/csv"
     // config.files_path+'/'+
-    res.download(config.files_path.concat(path.delimiter,file.idFile),file.idFileName);
+    res.download(pathFileWithExt,file.idFileName);
 });
 
 server.listen(config.port,() =>{
