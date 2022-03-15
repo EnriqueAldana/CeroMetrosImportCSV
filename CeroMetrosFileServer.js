@@ -16,9 +16,10 @@ app.get('/descargar/:idFile/:idFileName',function(req,res){
         idFile,
         idFileName
       } = req.params
-    const pathFileWithExt=config.files_path.concat(path.delimiter,file.idFile)
+    const pathFileWithExt=path.join(config.files_path,file.idFile)
+    const fileComponents= path.parse(pathFileWithExt);
     console.info("Ruta y archivo por descargar: ",pathFileWithExt)
-    console.log("Nombre para el archivo x descargar:",file.idFileName )
+    console.log("Componentes del archivo x descargar:",fileComponents )
     //res.attachment(__dirname+'/uploadedFiles/'+file.idFile);
     //res.end('Downloaded', 'UTF-8')
     //res.type="text/csv"
